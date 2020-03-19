@@ -1,0 +1,31 @@
+/*Style.css - til dine custom styles*/
+
+/*img {
+  max-width: 100%;
+}
+built in with the '.img-fluid' class
+*/
+
+/*.my-5 omregner til 16px/32px og... */
+/* .row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+} */
+
+/* 1. simple grid */
+section,
+footer {
+  margin-bottom: 30px;
+}
+
+#my-nav-bar {
+  height: 100px;
+}
+
+a {
+  overflow-wrap: break-word;
+}
+
+section#my-instagram-feed img {
+  border-radius: 10px;
+}

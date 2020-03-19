@@ -1,0 +1,153 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>2. One-pager</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    a:hover {
+      background-color: hotpink;
+    }
+
+    /* fix covering h4s when clicking nav items: https://github.com/twbs/bootstrap/issues/1768#issuecomment-9793708 */
+    /* both below [id^=anchor] mess up box sizes & background-color lacj */
+
+    [id^=anchor] {}
+
+    #middle-2,
+    .h {
+      background-color: red;
+    }
+
+    :target::before {
+      /*padding-top: 56px;
+      margin-top: -56px;*/
+      /*visibility: hidden;
+      height: 100px;*/
+      background-color: white;
+      background-color: transparent;
+      display: block;
+      content: " ";
+      padding-top: 100px;
+      margin-top: -100px;
+    }
+
+    footer {
+      background-color: hotpink;
+    }
+
+    /*
+    [id^=anchor]:before {
+      display: block;
+      content: " ";
+      margin-top: -75px;
+      height: 75px;
+      visibility: hidden;
+    }
+ */
+  </style><!-- https://www.w3schools.com/cssref/trysel.asp -->
+</head>
+<!-- https://getbootstrap.com/docs/4.3/components/scrollspy/#example-in-navbar
+body:
+-->
+
+<body class="position-relative" data-spy="scroll" data-target="#my-nav-bar" data-offset="156">
+  <!-- lacj: https://getbootstrap.com/docs/4.3/utilities/position/ -->
+
+  <!-- <nav id="navbar-example2" class="navbar navbar-light bg-light fixed-top sticky-top justify-content-center"> -->
+  <nav id="my-nav-bar" class="navbar navbar-light bg-light fixed-top sticky-top justify-content-center">
+    <!-- fixed-top used as for fallback for IE, we might want sticky if we want white space above it-->
+    <a class="navbar-brand" href="index.html">One-pager</a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="#hero">One</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#top">Two</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#anchor-tag3">Three</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#middle-2">Four</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#bottom-1">Five</a>
+      </li>
+      <!--       <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#one">one</a>
+          <a class="dropdown-item" href="#two">two</a>
+          <div role="separator" class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#three">three</a>
+        </div>
+      </li> -->
+    </ul>
+  </nav>
+
+  <main class="container">
+    <!-- class="container" bruges som yderste kasse (/container) for vores grid -->
+    <section id="hero" class="my-5">
+      <h4 id="anchor-tag1">One</h4>
+      <img src="imgs/raadhuspladsen01.jpg" class="d-block mx-auto img-fluid" alt="raadhuspladsen">
+    </section>
+    <section id="top" class="my-5">
+      <h4 id="anchor-tag2">two</h4>
+      <div class="row">
+        <img class="img-fluid col-4" src="imgs/raadhuspladsen02.jpg" alt="raadhuspladsen">
+        <img class="img-fluid col-4" src="imgs/raadhuspladsen04.jpg" alt="raadhuspladsen">
+        <img class="img-fluid col-4" src="imgs/raadhuspladsen06.jpg" alt="raadhuspladsen">
+      </div><!-- END row -->
+    </section>
+    <section id="middle" class="my-5">
+      <h4 id="anchor-tag3">three</h4>
+      <div class="row">
+        <img class="col-6 img-fluid" src="imgs/raadhuspladsen02.jpg" alt="raadhuspladsen">
+        <img class="col-6 img-fluid" src="imgs/raadhuspladsen06.jpg" alt="raadhuspladsen">
+      </div><!-- END row -->
+    </section>
+    <section id="middle-2" class="my-5">
+      <h4>four</h4>
+      <div class="text-center"><img class="img-fluid" src="imgs/raadhuspladsen02.jpg" alt="raadhuspladsen"></div>
+    </section>
+    <section id="bottom-1" class="my-5">
+      <h4 id="anchor-tag5">five</h4>
+      <div class="row">
+        <div class="col-3"><img class="img-fluid" src="imgs/raadhuspladsen01.jpg" alt="raadhuspladsen"></div>
+        <div class="col-3"><img class="img-fluid" src="imgs/raadhuspladsen02.jpg" alt="raadhuspladsen"></div>
+        <div class="col-3"><img class="img-fluid" src="imgs/raadhuspladsen04.jpg" alt="raadhuspladsen"></div>
+        <div class="col-3"><img class="img-fluid" src="imgs/raadhuspladsen06.jpg" alt="raadhuspladsen"></div>
+      </div><!-- END row -->
+    </section>
+    <section id="bottom-2" class="my-5">
+      <h4>Six</h4>
+      <div class="row">
+        <div class="col-6 offset-3"><img src="imgs/raadhuspladsen03.jpg" class="d-block mx-auto img-fluid" alt="raadhuspladsen"></div>
+      </div><!-- END .row -->
+    </section>
+
+  </main>
+  <footer id="footer" class="mt-auto py-3 container-fluid">
+    <h3>Hello from Lasse Claes</h3>
+
+  </footer>
+  <!-- Ikke mere indhold efter denne linie -->
+
+  <!-- jQuery og popper.js inkludes herunder - nødvendigt for Bootstrap  - slet dem ikke-->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="bs/js/bootstrap.min.js"></script>
+</body></html>
