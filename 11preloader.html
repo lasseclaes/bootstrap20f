@@ -1,0 +1,225 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>11. preloader</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .preloader {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 8999;
+/*      background-image: url('../images/default.gif');*/
+/*      background-repeat: no-repeat;     */
+      background-color: #888;
+/*      background-position: center;*/
+            display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* https://loading.io/css/ */
+
+    .lds-spinner {
+      color: yellow;
+      position: relative;
+/*      transform: translateX(calc(50% - 40px)) translateY(calc(50% - 40px));*/
+/*
+      top: calc(100% - 40px);
+      left: calc(100% - 40px);
+      z-index: 9999;
+*/
+      background-color: #f00;
+            transform: translateX(-40px) translateY(-40px);
+    }
+
+/*
+    .lds-spinner {
+      color: official;
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+*/
+
+    .lds-spinner div {
+      transform-origin: 40px 40px;
+      animation: lds-spinner 1.2s linear infinite;
+    }
+
+    .lds-spinner div:after {
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 37px;
+      width: 6px;
+      height: 18px;
+      border-radius: 20%;
+      background: #fff;
+    }
+
+    .lds-spinner div:nth-child(1) {
+      transform: rotate(0deg);
+      animation-delay: -1.1s;
+    }
+
+    .lds-spinner div:nth-child(2) {
+      transform: rotate(30deg);
+      animation-delay: -1s;
+    }
+
+    .lds-spinner div:nth-child(3) {
+      transform: rotate(60deg);
+      animation-delay: -0.9s;
+    }
+
+    .lds-spinner div:nth-child(4) {
+      transform: rotate(90deg);
+      animation-delay: -0.8s;
+    }
+
+    .lds-spinner div:nth-child(5) {
+      transform: rotate(120deg);
+      animation-delay: -0.7s;
+    }
+
+    .lds-spinner div:nth-child(6) {
+      transform: rotate(150deg);
+      animation-delay: -0.6s;
+    }
+
+    .lds-spinner div:nth-child(7) {
+      transform: rotate(180deg);
+      animation-delay: -0.5s;
+    }
+
+    .lds-spinner div:nth-child(8) {
+      transform: rotate(210deg);
+      animation-delay: -0.4s;
+    }
+
+    .lds-spinner div:nth-child(9) {
+      transform: rotate(240deg);
+      animation-delay: -0.3s;
+    }
+
+    .lds-spinner div:nth-child(10) {
+      transform: rotate(270deg);
+      animation-delay: -0.2s;
+    }
+
+    .lds-spinner div:nth-child(11) {
+      transform: rotate(300deg);
+      animation-delay: -0.1s;
+    }
+
+    .lds-spinner div:nth-child(12) {
+      transform: rotate(330deg);
+      animation-delay: 0s;
+    }
+
+    @keyframes lds-spinner {
+      0% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+<!--     <div class="preloader d-flex align-items-center justify-content-center">-->
+     <div class="preloader">
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      </div>
+  <main class="container">
+    <!-- class="container" bruges som yderste kasse (/container) for vores grid -->
+    <section id="hero">
+      <img src="imgs/raadhuspladsen01.jpg" class="d-block mx-auto img-fluid" alt="raadhuspladsen">
+    </section>
+
+    <section id="top" class="row">
+      <img class="col-4 img-fluid" src="imgs/raadhuspladsen02.jpg" alt="raadhuspladsen">
+      <img class="col-4 img-fluid" src="imgs/raadhuspladsen04.jpg" alt="raadhuspladsen">
+      <img class="col-4 img-fluid" src="imgs/raadhuspladsen06.jpg" alt="raadhuspladsen">
+    </section>
+
+    <section id="middle" class="row">
+      <img class="col-6 img-fluid" src="imgs/raadhuspladsen02.jpg" alt="raadhuspladsen">
+      <img class="col-6 img-fluid" src="imgs/raadhuspladsen06.jpg" alt="raadhuspladsen">
+    </section>
+
+    <section id="middle-2" class="text-center">
+      <img class="img-fluid" src="imgs/raadhuspladsen02.jpg" alt="raadhuspladsen">
+    </section>
+
+    <section id="bottom" class="row no-gutters">
+      <img class="col-3 img-fluid" src="imgs/raadhuspladsen01.jpg" alt="raadhuspladsen">
+      <img class="col-3 img-fluid" src="imgs/raadhuspladsen02.jpg" alt="raadhuspladsen">
+      <img class="col-3 img-fluid" src="imgs/raadhuspladsen04.jpg" alt="raadhuspladsen">
+      <img class="col-3 img-fluid" src="imgs/raadhuspladsen06.jpg" alt="raadhuspladsen">
+    </section>
+
+    <footer id="footer" class="row">
+      <img src="imgs/raadhuspladsen03.jpg" class="col-6 offset-3 d-block mx-auto img-fluid" alt="raadhuspladsen">
+    </footer>
+  </main>
+
+  <!-- Ikke mere indhold efter denne linie -->
+
+  <!-- jQuery og popper.js inkludes herunder - nødvendigt for Bootstrap  - slet dem ikke-->
+  <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+  <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="bs/js/bootstrap.min.js"></script>
+  <!--  <script src="js/scripts.js"></script>-->
+  <script>
+    //$(window).load(function() {
+    $(window).on('load', function() {
+      // executes when complete page is fully loaded, including all frames, objects and images
+      alert("(window).load was called - window is loaded!");
+//      debugger;
+      $('.preloader').fadeOut('fast');
+    });
+
+    $(document).ready(function() {
+      // executes when HTML-Document is loaded and DOM is ready
+      alert("(document).ready was called - document is ready!");
+    });
+
+  </script>
+
+
+</body>
+
+</html>
